@@ -100,7 +100,7 @@ class Main extends Component {
     return (
       <React.Fragment>
 
-        <Header/>
+        {/* <Header/> */}
         <div className="d-none d-md-block">
         <Sidenav />
         </div>
