@@ -100,11 +100,12 @@ class Main extends Component {
     return (
       <React.Fragment>
 
-        {/* <Header/> */}
+        <Header/> 
+      
         <div className="d-none d-md-block">
         <Sidenav />
         </div>
-
+<div className="d-none d-md-block">
       <div className={`wrapper ${this.setPage(this.props.location.pathname)}`}>
         
         <div className={`wrap ${currentKey} `}>
@@ -130,6 +131,14 @@ class Main extends Component {
             </CSSTransition>
           </TransitionGroup>
         </div>
+      </div>
+      </div>
+      <div className="d-block d-md-none">
+        <Home />
+        <About />
+        <Team />
+        <Services />
+        <Contact />
       </div>
       </React.Fragment>
     );

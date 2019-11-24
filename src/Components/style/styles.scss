@@ -14,6 +14,12 @@ html {
 // Make 100% height of browser window
 body, #root {
     height: 100%;
+    background-image: linear-gradient(to bottom right, rgb(14, 13, 13), rgb(41, 41, 41));
+    @media (max-width:767px)
+    {
+      height:1000px;
+      background-image: linear-gradient(to bottom right, rgb(14, 13, 13), rgb(41, 41, 41));
+    }
 }
 
 // General wrapper for site
@@ -53,11 +59,13 @@ p{
     text-align: left;
 }
 #sidenav {
-  position: fixed;
   z-index: 100;
-  width: 100%;
-  padding-top: 200px;
   background-color:transparent;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -75%);
+  
 
   a.logo {
       display: inline-block;
@@ -78,7 +86,7 @@ p{
           margin: 0 10px;
 
           a {
-              color:black;
+              color:purple;
               padding: 2px;
               transition: border 0.5s ease-in-out;
               text-decoration: none;
@@ -96,31 +104,49 @@ p{
     top: 0;
     z-index: 100;
     width: 100%;
-    padding-top: 20px;
+    padding-top: 1rem;
+    padding-left:.2rem;
     background-color:transparent;
 
-    a.logo {
-        display: inline-block;
-        color: #ffffff;
-        padding: 2px;
+    @media (min-width:768px)
+    {
+      #logoResponsive
+      {
+        width:45px; 
+        height: auto;
+      }
     }
 
     .content{
         display: flex;
         justify-content: space-between;
     }
+    #headerFont
+	{
+        color:whitesmoke;
+        position:absolute;
+        font-size:1.5rem;
+        margin-top:13px;
+        left:60px;
+        text-align:center;
+        font-family: 'JuliusSansOne-Regular', Sans-Serif;   
+    }
+    
 
     ul {
         display: block;
         list-style-type: none;
-        padding: 0;
+        padding-bottom:7px;
+        padding-right: 45px;
 
         li {
             display: inline-block;
-            margin: 0 10px;
+            margin: 0 5px;
+            font-family:"Monda-Regular";
+            font-size:.8em;
 
             a {
-                color:black;
+                color:white; ;
                 padding: 2px;
                 transition: border 0.5s ease-in-out;
                 text-decoration: none;
@@ -219,28 +245,29 @@ section.route-section.transition-wrap-enter-done{
   .wrapper {
 
     transition: all 0.5s ease-in-out;
+    background:transparent;
   
-    &.home {
-      background: rgba(9, 60, 111, 1);
-      color: #f1f1f1;
-    }
+    // &.home &.about {
+    //   background: rgba(9, 60, 111, 1);
+    //   color: #f1f1f1;
+    // }
   
-    &.about {
-      background: rgba(214, 218, 93, 1);
-      color: rgb(14, 13, 13);
-    }
-    &.services{
-      background: rgba(249, 58, 58, 1);
-      color: rgb(14, 13, 13);
-    }
-    &.team {
-      background: rgba(58, 249, 139, 1);
-      color: rgb(14, 13, 13);
-    }
-    &.contact{
-      background: rgba(75, 161, 248, 1);
-      color: #f1f1f1;
-    } 
+    // // &.about {
+    // //   background: rgba(214, 218, 93, 1);
+    // //   color: rgb(14, 13, 13);
+    // // }
+    // &.services{
+    //   background: rgba(249, 58, 58, 1);
+    //   color: rgb(14, 13, 13);
+    // }
+    // &.team {
+    //   background: rgba(58, 249, 139, 1);
+    //   color: rgb(14, 13, 13);
+    // }
+    // &.contact{
+    //   background: rgba(75, 161, 248, 1);
+    //   color: #f1f1f1;
+    // } 
   }
 
 //   <---------------------END SCSS TRANSITIONS----------->

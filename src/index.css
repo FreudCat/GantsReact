@@ -44,7 +44,7 @@
 }
 #home-page
 {
-  background:black;
+  background:transparent;
   height:100%;
 }
 #home-page .body-font
@@ -54,27 +54,8 @@
 }
 
 /* <------------------------------TOPnavbar----------------> */
-	.navbar 
-    {
-        background:purple;
-    }
-	#logoResponsive
-	{
-		width:50px;
-        height:auto; 
-        padding-top:21px; 
-        padding-left:21px; 
-    }
-	#headerFont
-	{
-        color:whitesmoke;
-        position:absolute;
-        font-size:1rem;
-        top: 12px;
-        left:60px;
-        text-align:center;
-        font-family: 'JuliusSansOne-Regular', Sans-Serif;   
-    }
+	
+	
     button.navbar-toggler /*hamburger menu*/
     {
         border:none;
@@ -145,10 +126,8 @@
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   -ms-flex-align: center;
-  align-items: center;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  padding: 0.5rem 1rem;
 }
 
 .navbar > .container,

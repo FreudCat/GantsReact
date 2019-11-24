@@ -6,7 +6,7 @@ class Services extends Component
         return (
             <div className={`page-wrap`}>
                 <div className="container">
-                    <div className="content">
+                    <div className="content" id="services-page">
                         <h1>SERVICES</h1>
                         <p>Hoodie taxidermy drinking vinegar, palo santo actually schlitz you probably haven't heard of them tofu kombucha keytar meggings. Adaptogen lomo brunch, activated charcoal austin ugh vape whatever schlitz semiotics tumblr.</p>
                     </div>
