@@ -1,3 +1,7 @@
+$mobile-bg-blk:rgb(31, 31, 31);
+$mobile-bg-brn:rgb(46, 40, 40);
+$mobile-bg-ht:850px; 
+
 html {
     height: 100%;
     width: 100%;
@@ -58,6 +62,263 @@ p{
     margin: 1rem auto;
     text-align: left;
 }
+
+// <--------------------------------HOME------------------->
+#home-page
+{
+  background:transparent;
+  height:100%;
+  @media (max-width:767px)
+  {
+    background: $mobile-bg-blk;
+    height:$mobile-bg-ht;
+  }
+
+    #home-header
+  {
+    font-family:"Monda-Bold";
+    font-size:2em; 
+    text-align:center; 
+    border-top: 1px solid white; 
+    border-bottom: 1px solid white; 
+    margin-top:100px;
+    color:white;
+  }
+    .body-font
+  {
+    font-size:1.2em; 
+    text-align: center;
+    color:white; 
+  }
+
+}
+
+// <----------------------------ABOUT PAGE---------------->
+#about-page
+{
+  background:transparent;
+  height:100%;
+  @media (max-width:767px)
+  {
+    background: $mobile-bg-brn;
+    height:$mobile-bg-ht; 
+  }
+
+    #about-header
+  {
+    font-family:"Monda-Bold";
+    font-size:2em; 
+    text-align:center; 
+    margin-top:100px;
+    color:white;
+  }
+    #about-font
+  {
+    font-size:1.2em; 
+    text-align: center;
+    color:white; 
+    font-family:"Monda-Regular";
+  }
+  #about-topic
+  {
+    font-size:1.2em; 
+    text-align: center;
+    color:white; 
+    font-family:"JuliusSansOne-Regular";
+  }
+
+}
+
+// <-----------------------------TEAM PAGE ------------------------->
+#team-page
+{
+  background:transparent;
+  height:100%;
+  @media (max-width:767px)
+  {
+    background:$mobile-bg-blk;
+    height:$mobile-bg-ht; 
+  }
+
+    #team-header
+  {
+    font-family:"Monda-Bold";
+    font-size:2em; 
+    text-align:center; 
+    color:white;
+    margin-top:100px; 
+  }
+    #team-font
+  {
+    font-size:1.2em; 
+    text-align: center;
+    color:white; 
+    font-family:"Monda-Regular";
+  }
+  #team-topic
+  {
+    font-size:1.2em; 
+    text-align: center;
+    color:white; 
+    font-family:"JuliusSansOne-Regular";
+  }
+
+}
+
+img.imgBorder
+{
+    border-radius:7%;
+    border:6px solid rgb(56, 54, 54);
+    display:inline-block;
+}
+.imgPadCenter
+{
+    margin-right:30px;
+}
+.imgText
+{
+    text-align:center;
+}
+@media (min-width:768px)
+{
+  .imgHoverL:hover
+  {
+      border:6px solid rgb(74, 85, 95);
+      position:relative;
+      top:-20px;
+      left:-30px;
+      width:180px;
+      height:auto;
+      display:block;
+      z-index:999;
+  }
+  .imgHoverC:hover
+  {
+      border:6px solid rgb(74, 85, 95);
+      position:relative;
+      top:-20px;
+      left:-10px;
+      width:180px;
+      height:auto;
+      display:block;
+      z-index:999;
+  }
+  .imgHoverR:hover
+  {
+      border:6px solid rgb(74, 85, 95);
+      position:relative;
+      top:-20px;
+      right:-10px;
+      width:180px;
+      height:auto;
+      display:block;
+      z-index:999;
+  }
+}
+
+#contact-page
+{
+  background:transparent;
+  height:100%;
+  @media (max-width:767px)
+  {
+    background:$mobile-bg-blk;
+    height:$mobile-bg-ht; 
+  }
+  #contact-header
+  {
+    font-family:"Monda-Bold";
+    font-size:2em; 
+    text-align:center; 
+    color:white;
+    margin-top:100px; 
+  }
+  #contact-font
+  {
+    font-size:1.1em; 
+    text-align: center;
+    color:white; 
+    font-family:"Monda-Regular"; 
+  }
+  #phone-header
+  {
+    font-size:1.3em; 
+    text-align: center;
+    color:white; 
+    font-family:"JuliusSansOne-Regular"; 
+  }
+  span#phone-font
+  {
+font-size:.8em; 
+    text-align: center;
+    color:white; 
+    font-family:"Monda-Regular"; 
+    vertical-align:center;
+    min-height:20px; 
+  }
+  #email-header
+  {
+    font-size:1.3em; 
+    text-align: center;
+    color:white; 
+    font-family:"JuliusSansOne-Regular"; 
+  }
+  span#email-font
+  {
+    font-size:.9em; 
+    text-align: center;
+    color:white; 
+    font-family:"Monda-Regular"; 
+  }
+  Label
+  {
+    color:white; 
+  }
+}
+
+#services-page
+{
+  background:transparent;
+  height:100%;
+  @media (max-width:767px)
+  {
+    background:$mobile-bg-brn;
+    height:$mobile-bg-ht; 
+  }
+  .services-item
+  {
+    font-size:1.5em;
+    font-family:"Monda-Bold";
+    color:white;  
+    text-align:center;
+  }
+    #services-header
+  {
+    font-family:"Monda-Bold";
+    font-size:2em; 
+    color:white;
+    margin-top:100px; 
+  }
+    .services-font
+  {
+    font-size:1.1em; 
+    text-align: center;
+    color:white; 
+    font-family:"JuliusSansOne-Regular";
+  }
+  #team-topic
+  {
+    font-size:1.2em; 
+    text-align: center;
+    color:white; 
+    font-family:"JuliusSansOne-Regular";
+  }
+
+}
+
+
+
+
 #sidenav {
   z-index: 100;
   background-color:transparent;
@@ -65,13 +326,6 @@ p{
     position: absolute;
     top: 50%;
     transform: translate(0, -75%);
-  
-
-  a.logo {
-      display: inline-block;
-      color: #ffffff;
-      padding: 2px;
-  }
 
   .content{
       display: flex;
@@ -86,14 +340,10 @@ p{
           margin: 0 10px;
 
           a {
-              color:purple;
+              color:white;
               padding: 2px;
               transition: border 0.5s ease-in-out;
               text-decoration: none;
-
-              &:hover{
-                  border-bottom: 2px solid #ffffff;
-              }
           }
       }
   }
@@ -241,11 +491,56 @@ section.route-section.transition-wrap-enter-done{
     transform: translate3d(0, 100%, 0);
   }
 
+Input
+{
+  background-color:rgb(54, 49, 49); 
+  width:100%; 
+  height:50px;
+  border:none;
+  border-radius: 5%;
+  color:rgb(214, 214, 214);
+  margin-top:5px;
+  padding-left:5px;
+  font-family:"Monda-Regular";
+}
+textarea
+{
+  background-color:rgb(54, 49, 49); 
+  width:100%; 
+  height:150px;
+  border:none;
+  border-radius: 5%; 
+  color:rgb(214, 214, 214);
+  padding-top: 10px; 
+  font-family:"Monda-Regular"; 
+  margin-top:5px;
+  padding-left:5px;
+}
+Label
+{
+  font-family:"JuliusSansOne-Regular";
+  color:whitesmoke;
+}
+.form-control:focus, .form-control:hover
+{
+    background-color:rgb(77, 68, 68);
+    outline:none;
+    box-shadow:none;
+    border-color:lightgray;
+    color:rgb(214, 214, 214);
+}
+.invalid-feedback
+{
+  color:rgb(245, 131, 131);
+}
 
+  
   .wrapper {
 
     transition: all 0.5s ease-in-out;
     background:transparent;
+
+
   
     // &.home &.about {
     //   background: rgba(9, 60, 111, 1);

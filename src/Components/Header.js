@@ -67,12 +67,11 @@ class Header extends Component
 											<Link to="/team" onClick={()=> scrollToElement('#team-page', {
 											offset: 0,
 											ease: 'in-bounce',
-											duration: 200, 
-											align: "middle"
+											duration: 200
 										})} >Team</Link>
 									</li>
 									<li>
-											<Link to="/services" onClick={()=> scrollToElement('#services-age', {
+											<Link to="/services" onClick={()=> scrollToElement('#services-page', {
 											offset: 0,
 											ease: 'in-bounce',
 											duration: 200
@@ -82,8 +81,7 @@ class Header extends Component
 											<Link to="/contact" onClick={()=> scrollToElement('#contact-page', {
 											offset: 0,
 											ease: 'in-bounce',
-											duration: 200, 
-											align: "middle"
+											duration: 200
 										})} >Contact</Link>
 									</li>
 								</ul>
