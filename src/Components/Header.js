@@ -48,12 +48,12 @@ class Header extends Component
 							{/* no links in the header in medium or larger windows  */}
 								<ul>
 									<li>
-											<Link to="/" onClick={()=> scrollToElement('#home-page', {
-											offset: 0,
-											ease: 'out-bounce',
-											duration: 200
-										})}>Home</Link>  
-										{/* scrolltoelement scrolls to the component  */}
+										<Link to="/" onClick={()=> scrollToElement('#home-page', {
+										offset: 0,
+										ease: 'out-bounce',
+										duration: 200
+									})}>Home</Link>  
+									{/* scrolltoelement scrolls to the component  */}
 				{/* if home doesn't work, may need to change this link to */}
 									</li>
 									<li>

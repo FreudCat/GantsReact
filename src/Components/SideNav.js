@@ -15,7 +15,7 @@ const Sidenav = (props) => {
 							{/* if home doesn't work, may need to change this link to */}
                         </li>
                         <li>
-                            <Link to="/about" >About</Link>
+                            <Link to="/about">About</Link>
                         </li>
                         <li>
                             <Link to="/team">Team</Link>

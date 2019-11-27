@@ -2,6 +2,7 @@ $mobile-bg-blk:rgb(31, 31, 31);
 $mobile-bg-brn:rgb(46, 40, 40);
 $mobile-bg-ht:850px; 
 
+
 html {
     height: 100%;
     width: 100%;
@@ -41,13 +42,7 @@ body, #root {
     max-width: 1024px; 
     margin: 0 auto;
     text-align: center;
-}
-
-.content {
-    display: block;
-    margin: 0 auto;
     padding: 0 20px 0 20px;
-    text-align: center;
 }
 
 .page-wrap {
@@ -74,19 +69,24 @@ p{
     height:$mobile-bg-ht;
   }
 
+
     #home-header
   {
     font-family:"Monda-Bold";
-    font-size:2em; 
+    font-size:2.2em; 
     text-align:center; 
     border-top: 1px solid white; 
     border-bottom: 1px solid white; 
-    margin-top:100px;
+    margin-top:250px;
     color:white;
+    @media (min-width:992px) and (max-width:1139px)
+    {
+      margin-top:200px;
+    }
   }
     .body-font
   {
-    font-size:1.2em; 
+    font-size:1.5em; 
     text-align: center;
     color:white; 
   }
@@ -94,6 +94,11 @@ p{
 }
 
 // <----------------------------ABOUT PAGE---------------->
+.col-md-4.padding, .col-md-8.padding
+{
+  padding:0px
+}
+
 #about-page
 {
   background:transparent;
@@ -101,30 +106,85 @@ p{
   @media (max-width:767px)
   {
     background: $mobile-bg-brn;
-    height:$mobile-bg-ht; 
+    height:$mobile-bg-ht;   
   }
 
     #about-header
   {
     font-family:"Monda-Bold";
-    font-size:2em; 
+    font-size:3em; 
     text-align:center; 
-    margin-top:100px;
+    margin-top:200px;
     color:white;
+
+    @media (max-width:767px)
+    {
+      margin-top:100px; 
+      font-size:2.3em; 
+    }
+    @media (min-width:992px) and (max-width:1139px)
+    {
+      margin-top:150px; 
+      font-size:2.3em; 
+    }
   }
     #about-font
   {
-    font-size:1.2em; 
-    text-align: center;
+    font-size:1.5em; 
+    text-align:left;
     color:white; 
     font-family:"Monda-Regular";
+    border-left:white 1px solid;
+    padding-left:10px;
+    margin-left:10px; 
+    @media (max-width:767px)
+    {
+      font-size:1em; 
+      border:none; 
+      text-align:center;
+    }
+    @media (min-width:992px) and (max-width:1139px)
+    {
+      font-size:1.4em;
+    }
   }
   #about-topic
   {
-    font-size:1.2em; 
-    text-align: center;
+    color:lightgrey;
+    text-align:right;
+    font-size:2.2em; 
     color:white; 
     font-family:"JuliusSansOne-Regular";
+    @media (max-width:767px)
+    {
+      font-size:1.7em; 
+      margin-top:50px; 
+      border:none; 
+      text-align:center;
+    }
+    @media (min-width:992px) and (max-width:1139px)
+    {
+      font-size:2em;
+    }
+  }
+  #bottom-about-font
+  {
+    font-family:"Monda-Bold";
+    font-size:2em; 
+    margin-top:100px; 
+    text-align:center; 
+    color:white;
+    @media (max-width:767px)
+    {
+      font-size:1em; 
+      border:none; 
+      text-align:center;
+      font-family:"JuliusSansOne-Regular"; 
+    }
+    @media (min-width:992px) and (max-width:1139px)
+    {
+      font-size:1.5em;
+    }
   }
 
 }
@@ -144,16 +204,32 @@ p{
   {
     font-family:"Monda-Bold";
     font-size:2em; 
+    margin-bottom:50px;
     text-align:center; 
     color:white;
     margin-top:100px; 
+    @media (min-width:768px)
+    {
+      font-size:3.2em; 
+    }
+    @media (min-width:992px) and (max-width:1139px)
+    {
+      margin-top:150px; 
+    } 
   }
     #team-font
   {
-    font-size:1.2em; 
+    font-size:1em; 
     text-align: center;
     color:white; 
     font-family:"Monda-Regular";
+    padding-top:0px;
+      margin-top:0px;
+      margin-bottom:25px;
+    @media (min-width:768px)
+    {
+      font-size:1.2em;
+    }
   }
   #team-topic
   {
@@ -171,48 +247,11 @@ img.imgBorder
     border:6px solid rgb(56, 54, 54);
     display:inline-block;
 }
-.imgPadCenter
+img
 {
-    margin-right:30px;
-}
-.imgText
-{
-    text-align:center;
-}
-@media (min-width:768px)
-{
-  .imgHoverL:hover
+  @media (min-width:992px) and (max-width:1139px)
   {
-      border:6px solid rgb(74, 85, 95);
-      position:relative;
-      top:-20px;
-      left:-30px;
-      width:180px;
-      height:auto;
-      display:block;
-      z-index:999;
-  }
-  .imgHoverC:hover
-  {
-      border:6px solid rgb(74, 85, 95);
-      position:relative;
-      top:-20px;
-      left:-10px;
-      width:180px;
-      height:auto;
-      display:block;
-      z-index:999;
-  }
-  .imgHoverR:hover
-  {
-      border:6px solid rgb(74, 85, 95);
-      position:relative;
-      top:-20px;
-      right:-10px;
-      width:180px;
-      height:auto;
-      display:block;
-      z-index:999;
+    width:200px; 
   }
 }
 
@@ -232,6 +271,12 @@ img.imgBorder
     text-align:center; 
     color:white;
     margin-top:100px; 
+    @media (min-width:768px)
+    {
+      font-size:2.5em;
+      margin-top:150px;
+      margin-bottom:15px;
+    }
   }
   #contact-font
   {
@@ -239,6 +284,11 @@ img.imgBorder
     text-align: center;
     color:white; 
     font-family:"Monda-Regular"; 
+    @media (min-width:768px)
+    {
+      font-size:1.5em;
+      margin-bottom:60px;
+    }
   }
   #phone-header
   {
@@ -246,6 +296,7 @@ img.imgBorder
     text-align: center;
     color:white; 
     font-family:"JuliusSansOne-Regular"; 
+    
   }
   span#phone-font
   {
@@ -254,7 +305,6 @@ font-size:.8em;
     color:white; 
     font-family:"Monda-Regular"; 
     vertical-align:center;
-    min-height:20px; 
   }
   #email-header
   {
@@ -272,8 +322,67 @@ font-size:.8em;
   }
   Label
   {
-    color:white; 
+    font-family:"JuliusSansOne-Regular";
+  color:whitesmoke;
+    @media (min-width:768px)
+    {
+      font-size:1.4em;
+    }
   }
+  Input
+{
+  background-color:rgb(54, 49, 49); 
+  width:100%; 
+  height:50px;
+  border:none;
+  border-radius: 5%;
+  color:rgb(214, 214, 214);
+  margin-top:5px;
+  padding-left:5px;
+  font-family:"Monda-Regular";
+  @media (min-width:768px)
+    {
+      font-size:1.2em;
+      margin-bottom:15px;
+    }
+}
+textarea
+{
+  background-color:rgb(54, 49, 49); 
+  width:100%; 
+  height:150px;
+  border:none;
+  border-radius: 5%; 
+  color:rgb(214, 214, 214);
+  padding-top: 10px; 
+  font-family:"Monda-Regular"; 
+  margin-top:5px;
+  padding-left:5px;
+  @media (min-width:768px)
+    {
+      font-size:1.2em;
+    }
+}
+
+.form-control:focus, .form-control:hover
+{
+    background-color:rgb(77, 68, 68);
+    outline:none;
+    box-shadow:none;
+    border-color:lightgray;
+    color:rgb(214, 214, 214);
+}
+.invalid-feedback
+{
+  color:rgb(245, 131, 131);
+}
+@media (min-width:768px)
+{
+  .bottom-row
+  {
+    margin-top:40px;
+  }
+}
 }
 
 #services-page
@@ -291,6 +400,14 @@ font-size:.8em;
     font-family:"Monda-Bold";
     color:white;  
     text-align:center;
+    @media (min-width:768px)
+    {
+      font-size:1.7em;
+    }
+    @media (min-width:992px)
+    {
+      font-size:1.4em; 
+    }
   }
     #services-header
   {
@@ -298,13 +415,31 @@ font-size:.8em;
     font-size:2em; 
     color:white;
     margin-top:100px; 
+    @media (min-width:768px)
+    {
+      font-size:2.5em;
+      padding-bottom:20px;
+    }
+    @media (min-width:992px)
+    {
+      font-size:2.5em;
+      padding-top:20px;
+    }
   }
     .services-font
   {
     font-size:1.1em; 
     text-align: center;
-    color:white; 
+    color:rgb(231, 229, 229); 
     font-family:"JuliusSansOne-Regular";
+    @media (min-width:768px)
+    {
+      font-size:1.5em;
+    }
+    @media (min-width:992px)
+    {
+      font-size:1.2em;
+    }
   }
   #team-topic
   {
@@ -326,12 +461,16 @@ font-size:.8em;
     position: absolute;
     top: 50%;
     transform: translate(0, -75%);
+    @media (min-width:992px)
+    {
+      transform: translate(-10%, -60%);
+      font-size:.9em;
+    }
 
   .content{
       display: flex;
       justify-content: space-between;
   }
-
   ul {
       list-style-type: none;
       padding: 0;
@@ -340,10 +479,17 @@ font-size:.8em;
           margin: 0 10px;
 
           a {
-              color:white;
+              color:rgb(173, 184, 196);
               padding: 2px;
               transition: border 0.5s ease-in-out;
               text-decoration: none;
+              font-family:"Monda-Regular"; 
+              &:focus{
+                color:rgb(241, 231, 231); 
+              }
+              &:hover{
+                color:rgb(241, 231, 231); 
+              }
           }
       }
   }
@@ -358,13 +504,26 @@ font-size:.8em;
     padding-left:.2rem;
     background-color:transparent;
 
-    @media (min-width:768px)
+    @media (min-width:768px) and (max-width:991px)
     {
       #logoResponsive
       {
         width:45px; 
         height: auto;
+        padding-top:17px; 
+        padding-left:0px; 
       }
+    }
+      @media (min-width:992px)
+    {
+      #logoResponsive
+      {
+        width:30px; 
+        height: auto;
+        padding-top:17px; 
+        padding-left:0px; 
+      }
+      
     }
 
     .content{
@@ -376,18 +535,24 @@ font-size:.8em;
         color:whitesmoke;
         position:absolute;
         font-size:1.5rem;
-        margin-top:13px;
+        margin-top:30px;
         left:60px;
         text-align:center;
-        font-family: 'JuliusSansOne-Regular', Sans-Serif;   
+        font-family: 'JuliusSansOne-Regular', Sans-Serif; 
+        @media (min-width:992px)
+        {
+          font-size:1.2em;
+          margin-top:24px;
+          left:40px;
+        }  
     }
     
 
     ul {
         display: block;
         list-style-type: none;
-        padding-bottom:7px;
-        padding-right: 45px;
+        padding-top:5px; 
+        padding-right: 65px;
 
         li {
             display: inline-block;
@@ -396,7 +561,7 @@ font-size:.8em;
             font-size:.8em;
 
             a {
-                color:white; ;
+                color:white; 
                 padding: 2px;
                 transition: border 0.5s ease-in-out;
                 text-decoration: none;
@@ -491,48 +656,7 @@ section.route-section.transition-wrap-enter-done{
     transform: translate3d(0, 100%, 0);
   }
 
-Input
-{
-  background-color:rgb(54, 49, 49); 
-  width:100%; 
-  height:50px;
-  border:none;
-  border-radius: 5%;
-  color:rgb(214, 214, 214);
-  margin-top:5px;
-  padding-left:5px;
-  font-family:"Monda-Regular";
-}
-textarea
-{
-  background-color:rgb(54, 49, 49); 
-  width:100%; 
-  height:150px;
-  border:none;
-  border-radius: 5%; 
-  color:rgb(214, 214, 214);
-  padding-top: 10px; 
-  font-family:"Monda-Regular"; 
-  margin-top:5px;
-  padding-left:5px;
-}
-Label
-{
-  font-family:"JuliusSansOne-Regular";
-  color:whitesmoke;
-}
-.form-control:focus, .form-control:hover
-{
-    background-color:rgb(77, 68, 68);
-    outline:none;
-    box-shadow:none;
-    border-color:lightgray;
-    color:rgb(214, 214, 214);
-}
-.invalid-feedback
-{
-  color:rgb(245, 131, 131);
-}
+
 
   
   .wrapper {
