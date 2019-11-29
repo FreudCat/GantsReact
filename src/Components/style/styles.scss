@@ -1,7 +1,14 @@
 $mobile-bg-blk:rgb(31, 31, 31);
 $mobile-bg-brn:rgb(46, 40, 40);
-$mobile-bg-ht:850px; 
+$mobile-bg-ht:900px; 
 
+.page-wrap .container
+{
+@media (max-width:1000px)
+{
+  max-width: 1000px;
+} //extends width to 1000px, if something gets messed up fix this 
+}
 
 html {
     height: 100%;
@@ -19,7 +26,7 @@ html {
 // Make 100% height of browser window
 body, #root {
     height: 100%;
-    background-image: linear-gradient(to bottom right, rgb(14, 13, 13), rgb(41, 41, 41));
+    background-image: linear-gradient(to bottom right, rgb(14, 13, 13), rgb(54, 54, 54));
     @media (max-width:767px)
     {
       height:1000px;
@@ -31,7 +38,7 @@ body, #root {
 .wrapper{
     display: block;
     height: 100%;
-    //overflow: hidden;
+    
 }
 // General content container
 .content {
@@ -69,7 +76,6 @@ p{
     height:$mobile-bg-ht;
   }
 
-
     #home-header
   {
     font-family:"Monda-Bold";
@@ -83,12 +89,21 @@ p{
     {
       margin-top:200px;
     }
+    @media (min-width:1140px)
+    {
+      font-size:2.5em;
+      margin-top:200px;
+    }
   }
     .body-font
   {
     font-size:1.5em; 
     text-align: center;
-    color:white; 
+    color:rgb(177, 188, 199);
+    @media (min-width:1140px)
+    {
+      font-size:1.5em;
+    }
   }
 
 }
@@ -127,6 +142,12 @@ p{
       margin-top:150px; 
       font-size:2.3em; 
     }
+    @media (min-width:1140px)
+    {
+      font-size:2.8em;
+      margin-top:140px; 
+
+    }
   }
     #about-font
   {
@@ -147,6 +168,10 @@ p{
     {
       font-size:1.4em;
     }
+    @media (min-width:1140px)
+    {
+      font-size:1.3em;
+    }
   }
   #about-topic
   {
@@ -166,6 +191,10 @@ p{
     {
       font-size:2em;
     }
+    @media (min-width:1140px)
+    {
+      font-size:1.6em;
+    }
   }
   #bottom-about-font
   {
@@ -184,6 +213,10 @@ p{
     @media (min-width:992px) and (max-width:1139px)
     {
       font-size:1.5em;
+    }
+    @media (min-width:1140px)
+    {
+      font-size:1.2em;
     }
   }
 
@@ -207,7 +240,13 @@ p{
     margin-bottom:50px;
     text-align:center; 
     color:white;
-    margin-top:100px; 
+    padding-top:100px; 
+    margin-top:0px;
+    @media (min-width:500px) and (max-width:767px)
+    {
+      padding-top:75px; 
+      font-size:2.5em;
+    } 
     @media (min-width:768px)
     {
       font-size:3.2em; 
@@ -216,6 +255,12 @@ p{
     {
       margin-top:150px; 
     } 
+    @media (min-width:1140px)
+    {
+      margin-top:130px; 
+      font-size:2.5em;
+      margin-bottom:20px; 
+    }
   }
     #team-font
   {
@@ -226,6 +271,12 @@ p{
     padding-top:0px;
       margin-top:0px;
       margin-bottom:25px;
+      @media (min-width:450px) and (max-width:767px)
+  {
+    font-size:.7em;
+    width:150px;
+    padding-left:4em;
+  }
     @media (min-width:768px)
     {
       font-size:1.2em;
@@ -246,9 +297,18 @@ img.imgBorder
     border-radius:7%;
     border:6px solid rgb(56, 54, 54);
     display:inline-block;
+    @media (min-width:450px) and (max-width:767px)
+    {
+      margin-left:3em;
+    }
+   
 }
 img
 {
+  @media (min-width:450px) and (max-width:767px)
+  {
+    width:10em;
+  }
   @media (min-width:992px) and (max-width:1139px)
   {
     width:200px; 
@@ -277,6 +337,17 @@ img
       margin-top:150px;
       margin-bottom:15px;
     }
+    @media (min-width:991px)
+    {
+      font-size:2.1em;
+      margin-top:120px;
+      margin-bottom:0px;
+    }
+    @media (min-width:1140px)
+    {
+      font-size:1.9em;
+      margin-top:110px; 
+    }
   }
   #contact-font
   {
@@ -289,6 +360,17 @@ img
       font-size:1.5em;
       margin-bottom:60px;
     }
+    @media (min-width:991px)
+    {
+      font-size:1.3em;
+      margin-top:0px;
+      margin-bottom:30px;
+    }
+    @media (min-width:1140px)
+    {
+      font-size:1em;
+      margin-bottom:10px;
+    }
   }
   #phone-header
   {
@@ -296,8 +378,18 @@ img
     text-align: center;
     color:white; 
     font-family:"JuliusSansOne-Regular"; 
-    
+    @media (min-width:992px)
+    {
+      margin-left:-50px; 
+      padding-top:20px; 
+    }
+    @media (min-width:1139px)
+    {
+      font-size:1em; 
+    }
   }
+
+
   span#phone-font
   {
 font-size:.8em; 
@@ -312,6 +404,14 @@ font-size:.8em;
     text-align: center;
     color:white; 
     font-family:"JuliusSansOne-Regular"; 
+    @media (min-width:992px)
+    {
+      margin-left:-65px; 
+    }
+    @media (min-width:1139px)
+    {
+      font-size:1em; 
+    }
   }
   span#email-font
   {
@@ -328,7 +428,32 @@ font-size:.8em;
     {
       font-size:1.4em;
     }
+    @media (min-width:992px)
+    {
+      font-size:1.2em;
+      margin-left:-267px; 
+    }
+    @media (min-width:1140px)
+    {
+      font-size:1em;
+      margin-left:-300px; 
+    }
   }
+  #comment-label
+    {
+      @media(min-width:991px)
+      {
+        margin-left:-78px; 
+        font-size:1.1em;
+      }
+      @media (min-width:1140px)
+    {
+      font-size:1em;
+      margin-left:-125px; 
+    }
+    }
+
+
   Input
 {
   background-color:rgb(54, 49, 49); 
@@ -345,6 +470,50 @@ font-size:.8em;
       font-size:1.2em;
       margin-bottom:15px;
     }
+    @media (min-width:991px)
+    {
+      font-size:1.1em; 
+      width:420px; 
+      height:40px; 
+      margin-bottom:10px; 
+    }
+    @media (min-width:1139px)
+    {
+      font-size:1em; 
+      width:420px; 
+      height:35px; 
+      margin-bottom:10px; 
+    }
+}
+#phone-div
+{
+  border-left:1px solid white; 
+}
+#phone-font
+{
+  color:white; 
+  font-family:"Monda-Regular";
+  padding-left:20px; 
+  font-size:1.1em; 
+  margin-top:-20px; 
+  margin-bottom:30px; 
+  @media (min-width:1139px)
+  {
+    font-size:.8em; 
+  }
+}
+
+#email-font
+{
+  color:white; 
+  font-family:"Monda-Regular";
+  padding-left:20px; 
+  font-size:1.1em;
+  margin-top:-20px; 
+  @media (min-width:1139px)
+  {
+    font-size:.8em; 
+  }
 }
 textarea
 {
@@ -362,7 +531,25 @@ textarea
     {
       font-size:1.2em;
     }
+    @media (min-width:991px)
+    {
+      width:420px; 
+    }
+    @media (min-width:1139px)
+    {
+      height:125px;
+      font-size:1em;
+    }
 }
+
+#lg-btn
+{
+  @media(min-width:992px)
+  {
+    margin-left:-260px; 
+  }
+}
+
 
 .form-control:focus, .form-control:hover
 {
@@ -415,6 +602,10 @@ textarea
     font-size:2em; 
     color:white;
     margin-top:100px; 
+    @media (min-width:550px) and (max-width:767px)
+    {
+      padding-left:25px;
+    }
     @media (min-width:768px)
     {
       font-size:2.5em;
@@ -424,6 +615,11 @@ textarea
     {
       font-size:2.5em;
       padding-top:20px;
+    }
+    @media (min-width:1140px)
+    {
+      font-size:2.2em;
+      padding-bottom:0px; 
     }
   }
     .services-font
@@ -439,6 +635,10 @@ textarea
     @media (min-width:992px)
     {
       font-size:1.2em;
+    }
+    @media (min-width:1140px)
+    {
+      font-size:1.1em;
     }
   }
   #team-topic
@@ -465,6 +665,11 @@ textarea
     {
       transform: translate(-10%, -60%);
       font-size:.9em;
+    }
+    @media (min-width:1140px)
+    {
+      font-size:1em;
+      transform: translate(-70%, -60%);
     }
 
   .content{
@@ -503,7 +708,16 @@ textarea
     padding-top: 1rem;
     padding-left:.2rem;
     background-color:transparent;
-
+    @media (min-width:450px) and (max-width:767px)
+    {
+      #logoResponsive
+      {
+        width:30px; 
+        height: auto;
+        padding-top:1.2em; 
+        padding-left:0px; 
+      }
+    }
     @media (min-width:768px) and (max-width:991px)
     {
       #logoResponsive
@@ -523,8 +737,17 @@ textarea
         padding-top:17px; 
         padding-left:0px; 
       }
-      
     }
+      @media (min-width:1140px)
+      {
+        #logoResponsive
+        {
+          width:30px; 
+          height: auto;
+          padding-top:20px; 
+          margin-left:-50px; 
+        } 
+      }
 
     .content{
         display: flex;
@@ -545,6 +768,12 @@ textarea
           margin-top:24px;
           left:40px;
         }  
+        @media (min-width:1140px)
+      {
+        font-size:1.2em;
+        margin-top:27px;
+        left:0px;
+      }
     }
     
 
@@ -553,6 +782,15 @@ textarea
         list-style-type: none;
         padding-top:5px; 
         padding-right: 65px;
+        @media (max-width:365px)
+        {
+          padding-right:50px;
+        }
+        @media (min-width:450px) and (max-width:767px)
+        {
+          padding-right:200px; 
+          padding-top:20px;
+        }
 
         li {
             display: inline-block;
@@ -614,7 +852,7 @@ section.route-section.transition-wrap-enter-done{
   .up  .transition-wrap-enter-active{
     opacity: 1;
     transform: translate3d(0, 100%, 0);
-    transition: opacity 300ms, transform 3s;
+    transition: opacity 1s, transform 3s;
   }
   
   .up .transition-wrap-exit {
@@ -640,7 +878,7 @@ section.route-section.transition-wrap-enter-done{
   .down .transition-wrap-enter-active {
     opacity: 1;
     transform: translate3d(0, -100%, 0);
-    transition: opacity 300ms, transform 3s;
+    transition: opacity 500ms, transform 3s;
   }
   
   .down .transition-wrap-exit {
@@ -661,7 +899,7 @@ section.route-section.transition-wrap-enter-done{
   
   .wrapper {
 
-    transition: all 0.5s ease-in-out;
+    transition: all 1s ease-in-out;
     background:transparent;
 
 

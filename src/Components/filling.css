@@ -1,0 +1,137 @@
+body
+{
+  
+    background:rgb(1, 14, 19);
+}
+.loader
+{
+    position:absolute; 
+    top:50%; 
+    left:50%; 
+    transform:translate(-50%, -50%); 
+}
+
+@keyframes animate
+{
+    0%{
+        background-position:left 800px top 30px; 
+    }
+    20%{
+        background-position:left 0px top -40px; 
+    }
+}
+.loader h1
+{
+    text-transform:uppercase; 
+    font-size: 4em; 
+    color:rgba(255, 255, 255, 0.1); 
+    background-image: url("./LoadingWave.png");
+    background-repeat:repeat-x;
+    font-family:"Times New Romane"; 
+    background-position:center;
+    -webkit-background-clip: text;
+    animation:animate 15s linear infinite; 
+}
+@media (max-width:449px)
+
+{
+    .loader
+{
+    position:absolute; 
+    top:50%; 
+    left:50%; 
+    transform:translate(-50%, -50%); 
+}
+
+    @keyframes animate
+{
+    0%{
+        background-position:left 800px top 175px; 
+    }
+    20%{
+        background-position:left 0px top -40px; 
+    }
+}
+    .loader h1
+    {text-transform:uppercase; 
+    font-size: 3em; 
+    color:rgba(255, 255, 255, 0.1); 
+    background-image: url("./LoadingWave.png");
+    background-repeat:repeat-x;
+    font-family:"Times New Romane"; 
+    background-position:center;
+    -webkit-background-clip: text;
+    animation:animate 15s linear infinite; 
+    }
+}
+
+
+@media (min-width:450px) and (max-width:650px)
+{
+    @keyframes animate
+{
+    0%{
+        background-position:left 800px top 180px; 
+    }
+    20%{
+        background-position:left 0px top -40px; 
+    }
+}
+    .loader h1
+    {text-transform:uppercase; 
+    font-size: 5em; 
+    color:rgba(255, 255, 255, 0.1); 
+    background-image: url("./LoadingWave.png");
+    background-repeat:repeat-x;
+    font-family:"Times New Romane"; 
+    background-position:center;
+    -webkit-background-clip: text;
+    animation:animate 15s linear infinite; 
+    }
+}
+@media (min-width:651px) and (max-width:1279px)
+{
+    @keyframes animate
+{
+    0%{
+        background-position:left 800px top 175px; 
+    }
+    20%{
+        background-position:left 0px top -40px; 
+    }
+}
+    .loader h1
+    {text-transform:uppercase; 
+    font-size: 5em; 
+    color:rgba(255, 255, 255, 0.1); 
+    background-image: url("./LoadingWave.png");
+    background-repeat:repeat-x;
+    font-family:"Times New Romane"; 
+    background-position:center;
+    -webkit-background-clip: text;
+    animation:animate 15s linear infinite; 
+    }
+}
+@media (min-width:1280px)
+{
+    @keyframes animate
+{
+    0%{
+        background-position:left 800px top 120px; 
+    }
+    20%{
+        background-position:left 0px top -40px; 
+    }
+}
+    .loader h1
+    {text-transform:uppercase; 
+    font-size: 4em; 
+    color:rgba(255, 255, 255, 0.1); 
+    background-image: url("./LoadingWave.png");
+    background-repeat:repeat-x;
+    font-family:"Times New Romane"; 
+    background-position:center;
+    -webkit-background-clip: text;
+    animation:animate 15s linear infinite; 
+    }
+}
