@@ -5,7 +5,12 @@ import App1 from './App';
 import "./Components/style/styles.scss"
 import * as serviceWorker from './serviceWorker';
 import 'bootstrap/dist/css/bootstrap-grid.css';
+import { appendFileSync } from 'fs';
 //import 'bootstrap/dist/css/bootstrap.css';
+
+
+
+
 
 ReactDOM.render(<App1/>, document.getElementById('root'));
 

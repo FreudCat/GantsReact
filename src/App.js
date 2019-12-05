@@ -5,19 +5,7 @@ import Main from "./Components/Main";
 import { BrowserRouter } from 'react-router-dom';
 import LoadingScreen from "./Components/Loading";
 
-// class App1 extends Component {
 
-//   render()
-//   {
-//     return (
-//       <BrowserRouter>
-//         <Main />
-//       </BrowserRouter>
-//     );
-//   }
-// }
-
-// export default App1;
 
 class App1 extends Component {
 

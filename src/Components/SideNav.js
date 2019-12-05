@@ -17,9 +17,9 @@ const Sidenav = (props) => {
                         <li>
                             <Link to="/about">About</Link>
                         </li>
-                        <li>
+                        {/* <li>
                             <Link to="/team">Team</Link>
-                        </li>
+                        </li> */}
                         <li>
                             <Link to="/services">Services</Link>
                         </li>

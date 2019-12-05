@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { Breadcrumb, BreadcrumbItem,
-    Button, Form, FormGroup, Label, Input, FormFeedback } from 'reactstrap';
+import { Button, Form, FormGroup, Label, Input, FormFeedback } from 'reactstrap';
+import nodemailer from "nodemailer"; //allows mail to be sent from the contact form 
+import axios from "axios"; 
 
 class Contact extends Component
 {
@@ -18,6 +19,7 @@ class Contact extends Component
 				}
 		};
 		this.handleInputChange=this.handleInputChange.bind(this);
+		this.handleSubmit=this.handleSubmit.bind(this); 
 	}
 
     validate(name, emailAddress) {//part of form validation
@@ -52,7 +54,26 @@ class Contact extends Component
         this.setState({
           [name]: value
         });
-    }
+	}
+	
+	async handleSubmit(event){
+		event.preventDefault(); 
+		console.log(this.state);
+
+		axios({
+      method: "POST", 
+      url:"http://localhost:3000/contact", 
+      data:  this.state
+    }).then((response)=>{
+      if (response.data.status === 'success'){
+        alert("Message Sent."); 
+        this.resetForm()
+      }else if(response.data.status === 'fail'){
+        alert("Message failed to send.")
+      }
+    })
+  } 
+	
 
 
 	render() {
@@ -73,7 +94,7 @@ class Contact extends Component
 	
 				<div className="row row-content align-items-center align-self-center">
 					<div className="col-12 offset-md-2 col-md-8">
-						<Form>
+						<Form onSubmit={this.handleSubmit}>
 							<FormGroup>
 								<Label htmlFor="name">Name</Label>
 								<div className="col-12">
@@ -121,10 +142,10 @@ class Contact extends Component
 				<br/>
 				<div className="row bottom-row">
 					<div className="col-12 col-md-6">
-						<p id="phone-header">PHONE: <span id="phone-font">123456789</span></p>
+						<a href="tel:509-869-7354" id="phone-font">Call Us</a>
 					</div>
 					<div className="col-12 col-md-6">
-						<p id="email-header">EMAIL: <span id="email-font">gants@gants.com</span></p>
+						<a href = "mailto: Shawn@cprofessionals.com" id="email-font">Email Us</a>
 					</div>
 				</div>
 			</div>
@@ -189,9 +210,9 @@ class Contact extends Component
 					</div>
 					<div className="col-lg-2" id="phone-div">
 						<p id="phone-header">PHONE:</p>
-						<p id="phone-font">123456789</p>
+						<a href="tel:509-869-7354" id="phone-font">509-869-7354</a>
 						<p id="email-header">EMAIL: </p>
-						<p id="email-font">gants@gants.com</p>
+						<a href = "mailto: Shawn@cprofessionals.com" id="email-font">Shawn@cprofessionals.com</a>
 					</div>
 				</div>
 				</div>

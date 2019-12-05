@@ -121,7 +121,6 @@ class Main extends Component {
                 <Switch location={location}>
                   <Route exact path="/" component={() => <Home />} />
                   <Route path="/about" component={()=><About />}/>
-                  <Route path="/team" component={() => <Team />} />
                   <Route path="/services" component={() => <Services />} />
                   <Route path="/contact" component={() => <Contact />} />
                   {console.log(location)}
@@ -135,7 +134,6 @@ class Main extends Component {
       <div className="d-block d-md-none">
         <Home />
         <About />
-        <Team />
         <Services />
         <Contact />
       </div>

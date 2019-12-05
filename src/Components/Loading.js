@@ -5,7 +5,7 @@ function LoadingScreen()
 {
     return (
         <React.Fragment>
-            <div class="loader">
+            <div className="loader">
             <h1>The Gants Group</h1>
             </div>
         </React.Fragment>

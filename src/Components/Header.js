@@ -63,13 +63,13 @@ class Header extends Component
 											duration: 200
 										})} >About</Link>
 									</li>
-									<li>
+									{/* <li>
 											<Link to="/team" onClick={()=> scrollToElement('#team-page', {
 											offset: 0,
 											ease: 'in-bounce',
 											duration: 200
 										})} >Team</Link>
-									</li>
+									</li> */}
 									<li>
 											<Link to="/services" onClick={()=> scrollToElement('#services-page', {
 											offset: 0,

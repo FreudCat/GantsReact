@@ -321,7 +321,7 @@ img
   height:100%;
   @media (max-width:767px)
   {
-    background:$mobile-bg-blk;
+    background:$mobile-bg-brn;
     height:$mobile-bg-ht; 
   }
   #contact-header
@@ -507,7 +507,7 @@ font-size:.8em;
 {
   color:white; 
   font-family:"Monda-Regular";
-  padding-left:20px; 
+  padding-left:30px; 
   font-size:1.1em;
   margin-top:-20px; 
   @media (min-width:1139px)
@@ -578,7 +578,7 @@ textarea
   height:100%;
   @media (max-width:767px)
   {
-    background:$mobile-bg-brn;
+    background:$mobile-bg-blk;
     height:$mobile-bg-ht; 
   }
   .services-item
@@ -624,21 +624,21 @@ textarea
   }
     .services-font
   {
-    font-size:1.1em; 
+    font-size:1em; 
     text-align: center;
     color:rgb(231, 229, 229); 
-    font-family:"JuliusSansOne-Regular";
+    font-family:"Monda-Regular";
     @media (min-width:768px)
     {
-      font-size:1.5em;
+      font-size:1.3em;
     }
     @media (min-width:992px)
     {
-      font-size:1.2em;
+      font-size:1.1em;
     }
     @media (min-width:1140px)
     {
-      font-size:1.1em;
+      font-size:1em;
     }
   }
   #team-topic
@@ -893,38 +893,11 @@ section.route-section.transition-wrap-enter-done{
     transform: scale(0.9);
     transform: translate3d(0, 100%, 0);
   }
-
-
-
   
   .wrapper {
 
     transition: all 1s ease-in-out;
     background:transparent;
-
-
-  
-    // &.home &.about {
-    //   background: rgba(9, 60, 111, 1);
-    //   color: #f1f1f1;
-    // }
-  
-    // // &.about {
-    // //   background: rgba(214, 218, 93, 1);
-    // //   color: rgb(14, 13, 13);
-    // // }
-    // &.services{
-    //   background: rgba(249, 58, 58, 1);
-    //   color: rgb(14, 13, 13);
-    // }
-    // &.team {
-    //   background: rgba(58, 249, 139, 1);
-    //   color: rgb(14, 13, 13);
-    // }
-    // &.contact{
-    //   background: rgba(75, 161, 248, 1);
-    //   color: #f1f1f1;
-    // } 
   }
 
 //   <---------------------END SCSS TRANSITIONS----------->
