@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { Button, Form, FormGroup, Label, Input, FormFeedback } from 'reactstrap';
-import nodemailer from "nodemailer"; //allows mail to be sent from the contact form 
-import axios from "axios"; 
+//import nodemailer from "nodemailer"; //allows mail to be sent from the contact form 
+//import axios from "axios"; 
+import {newUserEmail} from "./Email"; 
 
 class Contact extends Component
 {
@@ -19,7 +20,7 @@ class Contact extends Component
 				}
 		};
 		this.handleInputChange=this.handleInputChange.bind(this);
-		this.handleSubmit=this.handleSubmit.bind(this); 
+		// this.handleSubmit=this.handleSubmit.bind(this); 
 	}
 
     validate(name, emailAddress) {//part of form validation
@@ -56,25 +57,28 @@ class Contact extends Component
         });
 	}
 	
-	async handleSubmit(event){
-		event.preventDefault(); 
-		console.log(this.state);
+	// async handleSubmit(event){
+	// 	event.preventDefault(); 
+	// 	console.log(this.state);
 
-		axios({
-      method: "POST", 
-      url:"http://localhost:3000/contact", 
-      data:  this.state
-    }).then((response)=>{
-      if (response.data.status === 'success'){
-        alert("Message Sent."); 
-        this.resetForm()
-      }else if(response.data.status === 'fail'){
-        alert("Message failed to send.")
-      }
-    })
-  } 
+// 		axios({
+//       method: "POST", 
+//       url:"http://localhost:3000/contact", 
+//       data:  this.state
+//     }).then((response)=>{
+//       if (response.data.status === 'success'){
+//         alert("Message Sent."); 
+//         this.resetForm()
+//       }else if(response.data.status === 'fail'){
+//         alert("Message failed to send.")
+//       }
+//     })
+//   } 
 	
-
+	handlenewUserEmail(email, name){
+		return newUserEmail("anguyen031@gmail.com", "hello");
+		//HAVE To import function from the other .js file (see above) and then called the function WITHIN another a function while passing in parameters, and then this outer function is called later below in an onclick. Cannot just call imported function with an onclick. 
+	}
 
 	render() {
         const errors = this.validate(this.state.name, this.state.emailAddress);    //part of form validation
@@ -132,7 +136,7 @@ class Contact extends Component
 												<br/>	
 							</FormGroup>
 							<FormGroup>
-								<Button type="submit" className="btn-outline-secondary">
+								<Button type="submit" className="btn-outline-secondary" onClick={this.handlenewUserEmail}>
 										Send 
 								</Button>			
 							</FormGroup>
@@ -141,11 +145,11 @@ class Contact extends Component
 				</div>
 				<br/>
 				<div className="row bottom-row">
-					<div className="col-12 col-md-6">
+					<div className="col-6 col-md-6">
 						<a href="tel:509-869-7354" id="phone-font">Call Us</a>
 					</div>
-					<div className="col-12 col-md-6">
-						<a href = "mailto: Shawn@cprofessionals.com" id="email-font">Email Us</a>
+					<div className="col-6 col-md-6">
+					<a href = "mailto: Shawn@cprofessionals.com" id="email-font">Email Us</a>
 					</div>
 				</div>
 			</div>
@@ -198,7 +202,7 @@ class Contact extends Component
 												<br/>	
 							</FormGroup>
 							<FormGroup>
-								<Button type="submit" className="btn-outline-secondary" id="lg-btn">
+								<Button type="submit" className="btn-outline-secondary" id="lg-btn" onClick={this.handlenewUserEmail}>
 										Send 
 								</Button>			
 							</FormGroup>
