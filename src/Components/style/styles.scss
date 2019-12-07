@@ -2,6 +2,21 @@ $mobile-bg-blk:rgb(31, 31, 31);
 $mobile-bg-brn:rgb(46, 40, 40);
 $mobile-bg-ht:900px; 
 
+
+
+#modalHeader
+{
+  color:lightgrey; 
+  font-family:"Monda-Bold"; 
+  font-size:2em; 
+}
+#modalBody
+{
+  color:lightgrey; 
+  font-family:"Monda-Regular"; 
+  font-size:1.5em;
+}
+
 .page-wrap .container
 {
 @media (max-width:1000px)

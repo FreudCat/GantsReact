@@ -9,7 +9,7 @@
 /coverage
 
 # production
-
+ingore.js
 
 # misc
 .DS_Store

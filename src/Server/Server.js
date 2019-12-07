@@ -12,8 +12,8 @@ app.get("/", (req, res)=>{
     res.send("Welcomes to server") 
 }); 
 
-app.listen(4000, ()=>console.log("running 4000")); 
-
+app.listen(8080);
+console.log('Node server running on port 3000');
 
 SGmail.setApiKey(key); 
 
