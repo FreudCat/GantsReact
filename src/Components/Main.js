@@ -4,7 +4,7 @@ import Home from "./Home";
 import About from "./About"; 
 import Services from "./Services"; 
 import Header from "./Header"; 
-import Team from "./Team"; 
+// import Team from "./Team"; 
 import Contact from "./Contact"; 
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 import Sidenav from "./SideNav";

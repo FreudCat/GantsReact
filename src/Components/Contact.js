@@ -84,7 +84,7 @@ class Contact extends Component {
 
 	handlenewUserEmail(event) {
 		event.preventDefault();
-		fetch("http://127.0.0.1:4000");
+		// fetch("http://127.0.0.1:4000");
 		
 		this.toggleModal(); 
 		return newUserEmail(this.state.emailAddress, this.state.name, this.state.feedback);
@@ -165,7 +165,7 @@ class Contact extends Component {
 							</div>
 							<br />
 							<div className="row bottom-row">
-								<div className="col-6 col-md-6">
+								<div className="col-5 col-md-6">
 									<a href="tel:509-869-7354" id="phone-font">Call Us</a>
 								</div>
 								<div className="col-6 col-md-6">

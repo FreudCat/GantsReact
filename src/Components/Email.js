@@ -1,18 +1,18 @@
 import key from "./ignore"; 
 
-import express from "express"; 
-import cors from "cors"; 
+// import express from "express"; 
+// import cors from "cors"; 
 import { appendFileSync } from "fs";
 
 const SGmail=require("@sendgrid/mail"); 
-const app = express(); 
-app.use(cors()); 
+// const app = express(); 
+// app.use(cors()); 
 
-app.get("/", (req, res)=>{
-    res.send("Welcomes to server") 
-}); 
+// app.get("/", (req, res)=>{
+//     res.send("Welcomes to server") 
+// }); 
 
-app.listen(4000, ()=>console.log("running 4000")); 
+// app.listen(4000, ()=>console.log("running 4000")); 
 
 
 SGmail.setApiKey(key); 
